@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tarea 1 - Etiquetas HTML5 UTN">
+    <meta name="author" content="Tu Nombre Completo">
+    <title>Demostración de Etiquetas HTML5 - UTN</title>
+    <base href="" target="_blank">
+    <!-- Sin estilos complejos, tal como se solicita (solo un borde básico para distinguir secciones) -->
+    <style>
+        section { border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <!-- A. ESTRUCTURA BÁSICA -->
+    <header>
+        <hgroup>
+            <h1>Universidad Técnica Nacional (UTN)</h1>
+            <h2>Ingeniería del Software - Diseño de Aplicaciones Web</h2>
+        </hgroup>
+        <address>
+            Estudiante: Tu Nombre Completo <br>
+            Correo: <a href="mailto:tu_correo@utn.ac.cr">js_correo@utn.ac.cr</a>
+        </address>
+        <div>
+            <!-- Fotografía o Avatar requerido -->
+            <img src="tu_avatar.jpg" alt="Avatar del estudiante" width="120">
+        </div>
+    </header>
+
+    <main>
+        <!-- B. ESTRUCTURA DE SECCIÓN -->
+        <section>
+            <h2>B. Etiquetas de Estructura de Sección</h2>
+            <h3>Encabezados (h1 al h6)</h3>
+            <h4>Subtítulo nivel 4</h4>
+            <h5>Subtítulo nivel 5</h5>
+            <h6>Subtítulo nivel 6</h6>
+            
+            <p>Uso de división (div) e iframe incrustado:</p>
+            <div>
+                <iframe src="https://www.wikipedia.org" width="100%" height="150" title="Ejemplo de Iframe"></iframe>
+            </div>
+        </section>
+
+        <!-- C. ESTRUCTURA DE GRUPO -->
+        <section>
+            <h2>C. Etiquetas de Estructura de Grupo</h2>
+            
+            <h3>Listas (ul, ol, li)</h3>
+            <ul>
+                <li>Elemento desordenado 1</li>
+                <li>Elemento desordenado 2</li>
+            </ul>
+            <ol>
+                <li>Elemento ordenado 1</li>
+                <li>Elemento ordenado 2</li>
+            </ol>
+
+            <h3>Listas de Descripción (dl, dt, dd)</h3>
+            <dl>
+                <dt>HTML5</dt>
+                <dd>Lenguaje de marcado para la web.</dd>
+            </dl>
+
+            <h3>Figuras (figure, figcaption)</h3>
+            <figure>
+                <img src="https://via.placeholder.com/150" alt="Ejemplo figura">
+                <figcaption>Leyenda de la figura explicativa.</figcaption>
+            </figure>
+
+            <h3>Detalles y Resumen (details, summary)</h3>
+            <details>
+                <summary>Haz clic para expandir más información</summary>
+                <p>Contenido oculto revelado mediante details.</p>
+            </details>
+
+            <h3>Diálogo (dialog)</h3>
+            <dialog open>
+                <p>Este es un cuadro de diálogo abierto de ejemplo.</p>
+            </dialog>
+        </section>
+
+        <!-- D. ETIQUETAS DE TEXTO -->
+        <section>
+            <h2>D. Etiquetas de Texto y Formato</h2>
+            <p>Párrafo estándar con un salto de línea:<br>Texto después del salto.</p>
+            
+            <pre><code>
+    // Texto preformateado (pre y code)
+    let tarea = "HTML5";
+            </code></pre>
+
+            <blockquote>Bloque de cita (blockquote).</blockquote>
+            <p>Cita en línea (<q>q</q>) con su respectiva obra citada (<cite>Fuente Bibliográfica</cite>).</p>
+
+            <p>
+                Abreviatura: <abbr title="HyperText Markup Language">HTML</abbr> <br>
+                Definición: <dfn>Etiqueta</dfn> es un elemento de marcado.<br>
+                Teclado: Presiona <kbd>F12</kbd>.<br>
+                Negrita: <b>Texto b</b> y <strong>Texto strong</strong>.<br>
+                Cursiva: <i>Texto i</i> y <em>Texto em</em>.<br>
+                Resaltado: <mark>Texto mark</mark> y texto pequeño <small>(small)</small>.<br>
+                Modificaciones: <del>Texto borrado</del> e <ins>Texto insertado</ins>.<br>
+                Subíndice y Superíndice: H<sub>2</sub>O y X<sup>2</sup>.<br>
+                Fecha y hora: <time datetime="2026-09-21">21 de septiembre de 2026</time>.<br>
+                Dato de máquina: <data value="001">Código 001</data> y un span <span style="color:red;">con estilo de texto span</span>.
+            </p>
+        </section>
+
+        <!-- E. ETIQUETAS DE ENLACE -->
+        <section>
+            <h2>E. Etiquetas de Enlace y Mapas</h2>
+            <p>Enlace normal (a): <a href="https://www.w3schools.com">Ir a W3Schools</a></p>
+            
+            <p>Mapa de imagen (map y area):</p>
+            <img src="https://via.placeholder.com/200x50" alt="Imagen con mapa" usemap="#workmap">
+            <map name="workmap">
+              <area shape="rect" coords="0,0,100,50" href="https://www.utn.ac.cr" alt="UTN">
+            </map>
+        </section>
+
+        <!-- F. ETIQUETAS DE IMAGEN Y GRÁFICOS -->
+        <section>
+            <h2>F. Etiquetas de Imagen, Canvas y SVG</h2>
+            
+            <p>Imagen flexible (picture, source, img):</p>
+            <picture>
+                <source srcset="https://via.placeholder.com/150" media="(min-width: 650px)">
+                <img src="https://via.placeholder.com/100" alt="Imagen adaptable">
+            </picture>
+
+            <h3>Canvas</h3>
+            <canvas id="miCanvas" width="100" height="50" style="border:1px solid #000;"></canvas>
+
+            <h3>SVG (Gráfico Vectorial)</h3>
+            <svg width="60" height="60">
+                <circle cx="30" cy="30" r="20" fill="blue" />
+            </svg>
+        </section>
+
+        <!-- G. ETIQUETAS MULTIMEDIA -->
+        <section>
+            <h2>G. Etiquetas Multimedia</h2>
+            
+            <h3>Audio</h3>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+
+            <h3>Video</h3>
+            <video width="200" controls>
+                <source src="video.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universidad Técnica Nacional</p>
+    </footer>
+
+</body>
+</html>
